@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Life Environment Pest Control LLC | Luxury Lawn Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern Reset & CSS Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        :root {
+            --primary: #0B3C1A; /* Deep Luxury Green */
+            --primary-light: #1E5E3A;
+            --accent: #D4AF37; /* Metallic Gold */
+            --dark: #111111;
+            --light: #F9FBF7;
+            --gray: #666666;
+            --shadow: 0 10px 30px rgba(0,0,0,0.05);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .luxury-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* Top Bar Call to Action */
+        .top-bar {
+            background: var(--primary);
+            color: white;
+            font-size: 0.85rem;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .top-bar a:hover {
+            color: var(--accent);
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand img {
+            height: 45px;
+            object-fit: contain;
+        }
+
+        .brand-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary);
+            line-height: 1.1;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--dark);
+            position: relative;
+            padding: 5px 0;
+        }
+
+        nav ul a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        nav ul a:hover::after {
+            width: 100%;
+        }
+
+        nav ul a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            background: linear-gradient(rgba(11, 60, 26, 0.85), rgba(0, 0, 0, 0.7)), 
+                        url('https://greenlifeepc.com/wp-content/uploads/2026/05/PHOTO-2026-05-14-02-15-08-scaled.jpg') no-repeat center center/cover;
+            color: white;
+            margin-bottom: 80px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 35px;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--accent);
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 0;
+            border: 1px solid var(--accent);
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Section Global Styles */
+        section {
+            padding: 100px 5% 60px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--accent);
+            margin: 15px auto 0;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-left: 8px solid var(--primary);
+            border-bottom: 8px solid var(--accent);
+            box-shadow: var(--shadow);
+        }
+
+        /* Services Grid */
+        .services {
+            background: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-img {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+
+        .service-info {
+            padding: 30px;
+        }
+
+        .service-info h3 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .service-info p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .center-btn {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background: white;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .review-card {
+            background: var(--light);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .stars {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .review-card p {
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .author {
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            padding: 24px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 24px;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 24px;
+        }
+
+        /* Footer Element Layout */
+        footer {
+            background: var(--dark);
+            color: #ffffff;
+            padding: 80px 5% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--accent);
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 1px;
+            background: var(--accent);
+            margin-top: 8px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul a {
+            color: #bbbbbb;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-col p {
+            color: #bbbbbb;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .map-responsive {
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            min-height: 200px;
+        }
+
+        .map-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #222222;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888888;
+            letter-spacing: 0.5px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .about { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .hero h1 { font-size: 3rem; }
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav ul { gap: 15px; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .top-bar { flex-direction: column; gap: 5px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div>📍 10648 NW 49th Ct, Coral Springs, FL 33076 USA</div>
+        <div>📞 Call Us: <a href="tel:9547091178">(954) 709-1178</a> | ⏰ Available 24/7</div>
+    </div>
+
+    <header>
+        <div class="brand">
+            <img src="https://greenlifeepc.com/wp-content/uploads/2024/06/greenlife_logo_250_50.png" alt="Green Life Environment Pest Control LLC Logo">
+            <div class="brand-text">Green Life Environment<br><span style="font-size:0.9rem; letter-spacing:2px; color:var(--accent);">Pest Control LLC</span></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#footer">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>WELCOME TO <span>Green Life Environment Pest Control</span></h1>
+            <p>Green Life Environment Lawn Care delivers expert treatments to keep your lawn vibrant year-round. From spring sprays to winter care, we help your landscape thrive in every season.</p>
+            <a href="https://greenlifeepc.com/" target="_blank" class="btn">Book Free Consultation</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-image">
+            <img src="https://greenlifeepc.com/wp-content/uploads/2026/05/PHOTO-2026-05-14-02-14-58_2.jpg" alt="Luxury Horticulture Cultivation">
+        </div>
+        <div class="about-text">
+            <h3>Innovative Professional Approaches</h3>
+            <p>With a focus on customer satisfaction and meticulous attention to detail, we work closely with our clients to understand their unique requirements and deliver tailored solutions that drive measurable success and long-term value.</p>
+            <a href="https://greenlifeepc.com/about-us/" target="_blank" class="btn btn-outline">Read Our Full Story</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Tailored treatments crafted deliberately to foster resilience, deep green coloration, and immaculate precision handling for residential properties.</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://greenlifeepc.com/wp-content/uploads/2026/05/PHOTO-2026-05-14-02-15-08-scaled.jpg" alt="Lawn Applications Treatment">
+                </div>
+                <div class="service-info">
+                    <h3>Lawn Applications</h3>
+                    <p>Sophisticated baseline nutrient balancing systems deployed explicitly to amplify dense lawn optimization and strong root structures.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://greenlifeepc.com/wp-content/uploads/2026/05/PHOTO-2026-05-14-02-14-58_2.jpg" alt="Horticulture and Landscape Care">
+                </div>
+                <div class="service-info">
+                    <h3>Horticulture</h3>
+                    <p>Precision plant care management structures targeting exotic flora maintenance, pest defense metrics, and luxury growth cycles.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://greenlifeepc.com/wp-content/uploads/2026/05/PHOTO-2026-05-14-02-15-04-scaled.jpg" alt="Late Spring Spray Application">
+                </div>
+                <div class="service-info">
+                    <h3>Late Spring Spray</h3>
+                    <p>High-tier barrier defensive treatments curated strategically to ward off seasonal insects and maximize moisture retention parameters.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="center-btn">
+            <a href="https://greenlifeepc.com/our-services/" target="_blank" class="btn">Explore All Services</a>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="section-header">
+            <h2>What Our Client Says</h2>
+            <p>Experience true peace of mind. Read testimonies from estate owners across Coral Springs who trust our seasonal agronomic vision.</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"The absolute gold standard of environmental lawn treatments. Our ornamental trees and premium turf have never looked cleaner or sharper."</p>
+                <div class="author">— Julian R., Coral Springs</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Impeccable responsiveness and consistent quality control. They manage our landscape seamlessly with complete 24/7 service standard adherence."</p>
+                <div class="author">— Marcus T., Estate Owner</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Their late spring application saved our turf right ahead of the summer heatwave. Strategic, clean execution from top professionals."</p>
+                <div class="author">— Sophia L., Resident</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="section-header">
+            <h2>Frequently Answered Queries</h2>
+            <p>Get immediate operational knowledge regarding our elite lawn care administration.</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">What geographic regions do you cover?</div>
+                <div class="faq-answer">We primarily service luxury residential estates and commercial properties located within Coral Springs, Florida, and immediate neighboring elite residential tracts.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How frequently are your premium applications managed?</div>
+                <div class="faq-answer">Our standard luxury programs cycle seamlessly between changing micro-seasons—covering early spring preparation, seasonal barrier shielding sprays, and tailored soil winterization programs.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Are the treatments pet and eco-friendly?</div>
+                <div class="faq-answer">Yes, our modern premium applications leverage smart eco-tech formulations that strongly isolate and neutralize yard pests while optimizing overall biological health safety metrics.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Green Life EPC</h4>
+                <p style="margin-top: 15px;">Setting a masterfully polished benchmark for curated environmental pest oversight and modern lawn care systems.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#footer">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>📍 10648 NW 49th Ct, Coral Springs, FL 33076 USA</p>
+                <p>📞 <a href="tel:9547091178">(954) 709-1178</a></p>
+                <p>✉️ <a href="mailto:greenlifeepc@gmail.com">greenlifeepc@gmail.com</a></p>
+                <p>⏰ Working Hours: 24/7 Care</p>
+            </div>
+            <div class="footer-col">
+                <h4>Our Location</h4>
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.3551808111574!2d-80.2696347!3d26.2913422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d91bc4198f5ce5%3A0x9c387c6d0d7e401a!2sGreen%20Life%20Environment%20Pest%20Control%20LLC!5e1!3m2!1sen!2s!4v1783531381628!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Ranking Geeks. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close any open FAQs first
+                faqItems.forEach(i => i.classList.remove('active'));
+                
+                // Toggle active class
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
